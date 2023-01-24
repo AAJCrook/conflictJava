@@ -7,21 +7,21 @@ public class Board {
      */
 
     
-    private Piece[][] pieces; // pieces of the array
+    private Tile[][] tiles; // tiles of the array
 
 
-    // Constructor with pieces array already
-    public Board(Piece[][] pieces)
+    // Constructor with tiles array already
+    public Board(Tile[][] tiles)
     {
-        this.pieces = pieces;
+        this.tiles = tiles;
     }
 
 
 
     // Getters
-    public Piece[][] getPieces()
+    public Tile[][] getTiles()
     {
-        return pieces;
+        return tiles;
     }
 
     // Print
@@ -30,21 +30,21 @@ public class Board {
     public String toString()
     {
         String retString = "";
-        // loop through the pieces
-        for(int y = 0; y < pieces.length; y++)
+        // loop through the tiles
+        for(int y = 0; y < tiles.length; y++)
         {
-            for(int x = 0; x < pieces[0].length; x++)
+            for(int x = 0; x < tiles[0].length; x++)
             {
                 // grab symbols
-                retString += pieces[y][x].getSymbol();
+                retString += tiles[y][x].getSymbol();
                 // add space if not the last in the row
-                if(x != pieces[0].length - 1)
+                if(x != tiles[0].length - 1)
                 {
-                    retString += ' ';
+                    retString += "  ";
                 }
             }
             // don't add another new line at the end
-            if(y != pieces.length - 1)
+            if(y != tiles.length - 1)
             {
                 retString += '\n';
             }
