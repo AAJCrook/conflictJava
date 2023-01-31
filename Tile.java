@@ -4,6 +4,9 @@ public class Tile {
     // Coordinates of the Tile on the Board.
     private int y;
     private int x;
+    
+    // array of player indexes where players have vision, for example, if the index 0 = true, then the 0th player has vision over this tile
+    private boolean[] playerVision;
 
     // symbol representation on the Board for printouts, default = +;
     private char symbol;
